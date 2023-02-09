@@ -1,24 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import Header from './components/Header/Header';
+import Section from './components/Section/Section';
+import Footer from './components/Footer/Footer';
 
 function App() {
+ 
+  let users = [
+    {
+      name: "Mark",
+      lastName: "re",
+      age:23,
+      id: Date.now()
+    },
+    {
+      name: "Hosse",
+      lastName: "re",
+      age:25,
+      id: Date.now()
+    },
+    {
+      name: "John",
+      lastName: "re",
+      age:32,
+      id: Date.now()
+    },
+    {
+      name: "Tom",
+      lastName: "re",
+      age:23,
+      id: Date.now()
+    },
+    {
+      name: "Ari",
+      lastName: "re",
+      age:12,
+      id: Date.now()
+    }
+  ]; 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header />
+    <Section users={users} />
+    <Footer />
+    </>
   );
 }
 
